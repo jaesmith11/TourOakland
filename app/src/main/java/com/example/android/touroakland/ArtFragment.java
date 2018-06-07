@@ -16,7 +16,6 @@ import java.util.ArrayList;
  * A simple {@link Fragment} subclass.
  */
 public class ArtFragment extends ListFragment {
-    private int mImageResID;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,7 +30,6 @@ public class ArtFragment extends ListFragment {
         DestinationAdapter adapter = new DestinationAdapter(getActivity(), destinations);
 
         ListView listView = (ListView) rootView.findViewById(R.id.list_view);
-
         listView.setAdapter(adapter);
         return rootView;
     }
@@ -46,6 +44,7 @@ public class ArtFragment extends ListFragment {
             String locationInfo = currentDestination.getLocationName();
             String neighborhoodInfo = currentDestination.getNeighborhood();
             String dateInfo = currentDestination.getDateEst();
+            String toolbarInfo = getString(R.string.art_detailtb);
 
             //Retrieve coords for static map image
             String latInfo = currentDestination.getLatitude();
@@ -58,8 +57,8 @@ public class ArtFragment extends ListFragment {
             detailIntent.putExtra(getString(R.string.date_key), dateInfo);
             detailIntent.putExtra(getString(R.string.latitude_key), latInfo);
             detailIntent.putExtra(getString(R.string.longitude_key), longInfo);
-            startActivity(detailIntent);
-        }
+            detailIntent.putExtra(getString(R.string.toolbar_key), toolbarInfo);
+            startActivity(detailIntent);        }
 
     }
 }

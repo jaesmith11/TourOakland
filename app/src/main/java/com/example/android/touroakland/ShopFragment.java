@@ -1,10 +1,12 @@
 package com.example.android.touroakland;
 
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
+import android.support.v4.content.ContextCompat;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -31,7 +33,6 @@ public class ShopFragment extends ListFragment {
         DestinationAdapter adapter = new DestinationAdapter(getActivity(), destinations);
 
         ListView listView = (ListView) rootView.findViewById(R.id.list_view);
-
         listView.setAdapter(adapter);
         return rootView;
     }
@@ -46,6 +47,7 @@ public class ShopFragment extends ListFragment {
             String locationInfo = currentDestination.getLocationName();
             String neighborhoodInfo = currentDestination.getNeighborhood();
             String dateInfo = currentDestination.getDateEst();
+            String toolbarInfo = getString(R.string.shop_detailtb);
 
             //Retrieve coords for static map image
             String latInfo = currentDestination.getLatitude();
@@ -58,6 +60,7 @@ public class ShopFragment extends ListFragment {
             detailIntent.putExtra(getString(R.string.date_key), dateInfo);
             detailIntent.putExtra(getString(R.string.latitude_key), latInfo);
             detailIntent.putExtra(getString(R.string.longitude_key), longInfo);
+            detailIntent.putExtra(getString(R.string.toolbar_key), toolbarInfo);
             startActivity(detailIntent);
         }
 

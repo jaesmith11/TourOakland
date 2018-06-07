@@ -31,7 +31,6 @@ public class NightFragment extends ListFragment {
         DestinationAdapter adapter = new DestinationAdapter(getActivity(), destinations);
 
         ListView listView = (ListView) rootView.findViewById(R.id.list_view);
-
         listView.setAdapter(adapter);
         return rootView;
     }
@@ -46,6 +45,7 @@ public class NightFragment extends ListFragment {
             String locationInfo = currentDestination.getLocationName();
             String neighborhoodInfo = currentDestination.getNeighborhood();
             String dateInfo = currentDestination.getDateEst();
+            String toolbarInfo = getString(R.string.nite_detailtb);
 
             //Retrieve coords for static map image
             String latInfo = currentDestination.getLatitude();
@@ -58,6 +58,7 @@ public class NightFragment extends ListFragment {
             detailIntent.putExtra(getString(R.string.date_key), dateInfo);
             detailIntent.putExtra(getString(R.string.latitude_key), latInfo);
             detailIntent.putExtra(getString(R.string.longitude_key), longInfo);
+            detailIntent.putExtra(getString(R.string.toolbar_key), toolbarInfo);
             startActivity(detailIntent);
         }
 

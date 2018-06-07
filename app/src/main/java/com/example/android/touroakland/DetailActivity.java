@@ -24,16 +24,11 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        //Use custom toolbar_main.xml resource
-        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        //Apply xml style res to customize font
-        toolbar.setTitleTextAppearance(this, R.style.ToolbarFont);
-
         //Declare & initialize variables to be extracted from Bundle
         String mLocationName = null;
         String mlatitude = null;
         String mlongitude = null;
+        String mToolbarTitle = null;
 
         //Create instances of views to populate info in activity_detail.xml
         TextView mLocation = findViewById(R.id.detail_location);
@@ -41,8 +36,7 @@ public class DetailActivity extends AppCompatActivity {
         TextView mDateEst = findViewById(R.id.detail_date_est);
         ImageView mMapImage = findViewById(R.id.detail_image);
 
-
-        //Extract data from intent
+        //Extract data from Fragment's intent
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
             String location = (String) extras.get(getString(R.string.location_key));
@@ -57,7 +51,17 @@ public class DetailActivity extends AppCompatActivity {
 
             mlatitude = (String) extras.get(getString(R.string.latitude_key));
             mlongitude = (String) extras.get(getString(R.string.longitude_key));
+
+            mToolbarTitle = (String) extras.get(getString(R.string.toolbar_key));
         }
+
+        //Use custom toolbar_main.xml resource
+        Toolbar toolbar = (Toolbar)findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+        //Apply xml style res to customize font
+        toolbar.setTitleTextAppearance(this, R.style.ToolbarFont);
+        //Apply custom title to toolbar based on Destination type: art, shop etc
+        getSupportActionBar().setTitle(mToolbarTitle);
 
         //Use the lat/long coords provided by the Intent bundle to display a static map image
         if (((mlatitude) != null) && ((mlongitude) != null)) {

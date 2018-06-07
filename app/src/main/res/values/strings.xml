@@ -38,6 +38,7 @@
     <string name="image_key">Image</string>
     <string name="latitude_key">Latitude</string>
     <string name="longitude_key">Longitude</string>
+    <string name="toolbar_key">Toolbar</string>
 
     <string-array name="tab_titles">
         <item>Out</item>
@@ -45,5 +46,11 @@
         <item>Nite</item>
         <item>Shop</item>
     </string-array>
+
+    <string name="art_detailtb">Art Scene</string>
+    <string name="shop_detailtb">Shop Local</string>
+    <string name="out_detailtb">Get Outside</string>
+    <string name="nite_detailtb">Good Nite</string>
+
 
 </resources>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:orientation="vertical">
+
+    <include
+        layout="@layout/toolbar_main"
+        android:id="@+id/toolbar"/>
+
+    <ImageView
+        android:id="@+id/detail_image"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_marginTop="8dp"
+        style="@style/cardLayoutStyle"
+        android:elevation="4dp" />
+
+    <TextView
+        android:id="@+id/detail_location"
+        style="@style/headingStyle"
+        android:text="@string/location_name" />
+
+    <TextView
+        android:id="@+id/detail_neighborhood"
+        style="@style/detailStyle"
+        android:text="@string/neighborhood" />
+
+    <TextView
+        android:id="@+id/detail_date_est"
+        style="@style/detailStyle"
+        android:text="@string/est" />
+
+</LinearLayout>

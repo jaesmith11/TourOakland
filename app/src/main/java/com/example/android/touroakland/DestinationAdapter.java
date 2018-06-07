@@ -26,6 +26,7 @@ public class DestinationAdapter extends ArrayAdapter<Destination> {
     public DestinationAdapter(@NonNull Context context, @NonNull ArrayList<Destination> destinations) {
         super(context, 0, destinations);
 
+
     }
 
     @Override
