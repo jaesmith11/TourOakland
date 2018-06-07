@@ -1,0 +1,49 @@
+<resources>
+    <string name="app_name">Tour Oakland</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="location_name">Location Name</string>
+    <string name="neighborhood">Neighborhood</string>
+    <string name="est">Est.</string>
+    <string name="good_mother">Good Mother</string>
+    <string name="naming_gallery">Naming Gallery</string>
+    <string name="one_am_generator">1AM Generator</string>
+    <string name="downtown">Downtown</string>
+    <string name="est_2015">Est. 2015</string>
+    <string name="est_2012">Est. 2012</string>
+    <string name="est_2017">Est. 2017</string>
+    <string name="grand_lake_theatre">Grand Lake Theatre</string>
+    <string name="fox_theatre">Fox Oakland Theatre</string>
+    <string name="starline_social">Starline Social Club</string>
+    <string name="grand_lake">Grand Lake</string>
+    <string name="est_1926">Est. 1926</string>
+    <string name="est_1928">Est. 1928</string>
+    <string name="lake_merritt">Lake Merritt</string>
+    <string name="morcom_rose">Morcom Rose Garden</string>
+    <string name="mtn_view_cem">Mountain View Cemetary</string>
+    <string name="piedmont">Piedmont</string>
+    <string name="est_1870">Est. 1870</string>
+    <string name="est_1933">Est. 1933</string>
+    <string name="est_1863">Est. 1863</string>
+    <string name="oaktown_spice">Oaktown Spice Shop</string>
+    <string name="farmers_market">Grand Lake Farmer\'s Market</string>
+    <string name="oaklandish">Oaklandish</string>
+    <string name="est_2011">Est. 2011</string>
+    <string name="est_1998">Est. 1998</string>
+    <string name="est_2000">Est. 2000</string>
+    <string name="location_key">Location</string>
+    <string name="address_key">Address</string>
+    <string name="date_key">DateEst</string>
+    <string name="image_key">Image</string>
+    <string name="latitude_key">Latitude</string>
+    <string name="longitude_key">Longitude</string>
+
+    <string-array name="tab_titles">
+        <item>Out</item>
+        <item>Art</item>
+        <item>Nite</item>
+        <item>Shop</item>
+    </string-array>
+
+</resources>
