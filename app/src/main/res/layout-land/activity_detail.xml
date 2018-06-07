@@ -1,36 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical">
+    android:layout_height="match_parent">
 
-    <include
-        layout="@layout/toolbar_main"
-        android:id="@+id/toolbar"/>
-
-    <ImageView
-        android:id="@+id/detail_image"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="300dp"
-        android:layout_marginTop="8dp"
-        style="@style/cardLayoutStyle"
-        android:elevation="4dp" />
+        android:layout_height="match_parent"
+        android:background="@color/background"
+        android:orientation="vertical">
 
-    <TextView
-        android:id="@+id/detail_location"
-        style="@style/headingStyle"
-        android:text="@string/location_name" />
+        <include
+            layout="@layout/toolbar_main"
+            android:id="@+id/toolbar"/>
 
-    <TextView
-        android:id="@+id/detail_neighborhood"
-        style="@style/detailStyle"
-        android:text="@string/neighborhood" />
+        <ImageView
+            android:id="@+id/detail_image"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginLeft="@dimen/list_item_height"
+            android:layout_marginRight="@dimen/list_item_height"
+            style="@style/cardLayoutStyle"
+            android:elevation="4dp" />
 
-    <TextView
-        android:id="@+id/detail_date_est"
-        style="@style/detailStyle"
-        android:text="@string/est" />
+        <TextView
+            android:id="@+id/detail_location"
 
-</LinearLayout>
+            android:paddingRight="@dimen/list_item_height"
+            style="@style/headingStyle"
+            android:text="@string/location_name" />
+
+        <TextView
+            android:id="@+id/detail_neighborhood"
+            android:layout_marginRight="@dimen/list_item_height"
+            style="@style/detailStyle"
+            android:text="@string/neighborhood" />
+
+        <TextView
+            android:id="@+id/detail_date_est"
+            android:layout_marginRight="@dimen/list_item_height"
+            style="@style/detailStyle"
+            android:text="@string/est" />
+
+    </LinearLayout>
+</ScrollView>
